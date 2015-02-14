@@ -88,5 +88,5 @@ import java.util.Scanner;
    			    "You need at least "+moreCookies+" more cookie(s)!");
    		    }
    		
-}  //end of main method   
-  	} //end of class
+        }  //end of main method   
+    } //end of class
