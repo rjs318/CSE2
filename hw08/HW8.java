@@ -35,7 +35,7 @@ import java.util.Scanner;
             System.out.println("                     ***               ***     ***               ***    ***               ***              ");
             System.out.println("                     *********************     *********************    *********************               "); 
         }
-        public static String getInput(Scanner scan, String string){
+        public static String getInput(Scanner scan, String string){//getInput method with two parameters
             String answer =scan.nextLine();
             if(!answer.equals("C")&&!answer.equals("c")){
                 System.out.println("Yea right LOSER!");
@@ -44,11 +44,12 @@ import java.util.Scanner;
         
             return string;
         }
-        public static String getInput(Scanner scan, String string, int trial){
+        public static String getInput(Scanner scan, String string, int trial){//getInput method with three parameters
             String answer = scan.nextLine();
-            int critcount=0;
-            while(critcount<trial){
+            int critcount=0;//keeps track of how many critical hits the user has
+            while(critcount<trial){//runs while the user doesn't have enough critical hits to kill giant
                 if(!answer.equals("A")&&!answer.equals("a")&&!answer.equals("E")&&!answer.equals("e")){
+                    //if input is not A,a,E, or e, the program exits
                     System.out.println("You were executed by the GIANT! Game Over!");
                     System.exit(0);
                 }
@@ -76,21 +77,21 @@ import java.util.Scanner;
                             }
                     }
                 }
-                if(critcount!=trial){
+                if(critcount!=trial){//user reprompted while the critical hits is not equal to trial
                 System.out.println("Enter 'A' or 'a' to Attack, 'E' or 'E' to Escape, ANYTHING else is to YIELD");
                 answer=scan.next();
                 }
             }
             return string;
         }//end of method
-        public static String getInput(Scanner scan){
-            if(!scan.hasNextInt()){
-                System.out.println("That's not even a number! You get NOTHING!");
+        public static String getInput(Scanner scan){//getInput method with one parameter
+            if(!scan.hasNextInt()){//checks for int input and quits if input is not an int
+                System.out.println("That's not even a choice! You get NOTHING!");
                 System.exit(0);
             }
             int answer = scan.nextInt();
             String a="";
-            switch(answer){
+            switch(answer){//prints what is in the box chosen by the user
                 case 1: System.out.println("IT'S BEYONCE!!! ");
                 break;
                 case 2: System.out.println("IT'S A LIFETIME SUPPLY OF BEN AND JERRY'S!!! ");
@@ -107,25 +108,25 @@ import java.util.Scanner;
             Scanner scan = new Scanner(System.in);
             System.out.println("Welcome to MG's adventure world. Now your journey begins. Good luck!");
             System.out.println("Please hit 'C' or 'c' to continue, anything else to quit-");
-            String input = getInput(scan, "Cc");
+            String input = getInput(scan, "Cc");//calls the getInput method with two parameters
             System.out.println("You are in a dead valley.");
             System.out.println("Please hit 'C' or 'c' to continue, anything else to quit-");
-            input = getInput(scan, "Cc");
+            input = getInput(scan, "Cc");//calls the getInput method with two parameters
             System.out.println("You walked and walked and walked and you saw a cave!");
-            cave();
+            cave();////calls cave method 
             System.out.println("Please hit 'C' or 'c' to continue, anything else to quit-");
-            input = getInput(scan, "Cc");
+            input = getInput(scan, "Cc");//calls the getInput method with two parameters
             System.out.println("You entered a cave!");
             System.out.println("Please hit 'C' or 'c' to continue, anything else to quit-");
-            input = getInput(scan, "Cc");
+            input = getInput(scan, "Cc");//calls the getInput method with two parameters
             System.out.println("Unfortunately, you ran into a GIANT!");
-            giant();
+            giant();//calls giant method
             System.out.println("Enter 'A' or 'a' to Attack, 'E' or 'E' to Escape, ANYTHING else is to YIELD");
-            input = getInput(scan, "AaEe", 10);
+            input = getInput(scan, "AaEe", 10);//calls the getInput method with three parameters
             System.out.println("Congratulations! You SURVIVED! Get your REWARD!");
             System.out.println("There are three 3 tressure boxes in front of you! Enter the box number you want to open!");
-            box();
-            input = getInput(scan);
+            box();//calls box method
+            input = getInput(scan);//calls the getInput method with one parameter
             System.out.println("Hero! Have a good day!");
         }//end of main method
     }//end of class 
