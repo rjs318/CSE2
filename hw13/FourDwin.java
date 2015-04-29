@@ -171,15 +171,15 @@ public class FourDwin{
         //sorts values in ascending order
         int first=0;
         double temp=0;  
-        for (int i= A.length-1;i>0;i--){
-            first = 0;
+        for (int i=A.length-1;i>0;i--){
+            first=0;
             for(int j=1;j<=i;j++){
-                if( A[j]>A[first] )         
+                if(A[j]>A[first])         
                     first = j;
           }
-          temp= A[first];
-          A[first] = A[i];
-          A[i]= temp; 
+          temp=A[first];
+          A[first]=A[i];
+          A[i]=temp; 
         }
     }
     public static void main(String[] args){
