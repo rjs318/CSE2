@@ -80,7 +80,6 @@ public class FourDwin{
         for(int m=0; m<A.length;m++){
                 sort3Darray(A[m]);
           }
-       
         countLength(A);
     }
     //the countLength method checks if an of the 3D arrays have the same length, 
@@ -152,7 +151,6 @@ public class FourDwin{
         }
     }
 }
-    
     public static void sort3Darray(double[][][] A){
         //sorts the values in a 3D array by filling a 1D array with those values and calling selection sort on the 
         //1D array. 
@@ -166,7 +164,6 @@ public class FourDwin{
                 for(int l=0; l<A[i][j].length;l++){//puts sorted values of 1D array into the original 3D array
                     A[i][j][l]=B[l];
                 }
-                
             }    
         }
     }//end of sort3Darray
@@ -174,7 +171,7 @@ public class FourDwin{
         //sorts values in ascending order
         int first=0;
         double temp=0;  
-        for (int i= A.length-1;i>0;i--)  {
+        for (int i= A.length-1;i>0;i--){
             first = 0;
             for(int j=1;j<=i;j++){
                 if( A[j]>A[first] )         
@@ -185,7 +182,6 @@ public class FourDwin{
           A[i]= temp; 
         }
     }
-    
     public static void main(String[] args){
         //prompts user for two integers X and Y where Y>X
         Scanner scan = new Scanner(System.in);
